@@ -1,0 +1,9 @@
+def first(arr,target):
+    for num in arr:
+        if num > target:
+            return num
+    return -1
+arr = [3, 5, 7, 2, 8, 10]
+target = 6
+result = first(arr, target)
+print("output: ", result)
