@@ -1,0 +1,14 @@
+def count(arr, target):
+    def lower(x):
+        l, r = 0, len(arr)
+        while l < r:
+            m = (l + r) // 2 
+            if arr[m] < x:
+                l = m + 1
+            else:
+                r = m
+        return l
+    return lower(target + 1) - lower(target)
+arr = [2, 4, 4, 4, 6, 7]
+target = 4
+print(count(arr, target)) 
